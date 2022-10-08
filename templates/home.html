@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Predict Salary</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+
+</head>
+
+<body>
+<div class="login">
+    <h1>Predict Salary</h1>
+
+    <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" name="age" placeholder="age" required="required" /><br>
+        <input type="text" name="workclass" placeholder="workclass" required="required" /><br>
+        <input type="text" name="education" placeholder="education" required="required" /><br>
+        <input type="text" name="marital-status" placeholder="marital-status" required="required" /><br>
+        <input type="text" name="occupation" placeholder="occupation" required="required" /><br>
+        <input type="text" name="relationship" placeholder="relationship" required="required" /><br>
+        <input type="text" name="race" placeholder="race" required="required" /><br>
+        <input type="text" name="gender" placeholder="gender" required="required" /><br>
+        <input type="text" name="capital-gain" placeholder="capital-gain" required="required" /><br>
+        <input type="text" name="capital-loss" placeholder="capital-loss" required="required" /><br>
+        <input type="text" name="hours-per-week" placeholder="hours-per-week" required="required" /><br>
+        <input type="text" name="native-country" placeholder="native-country" required="required" /><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+    <br>
+
+
+</div>
+{{prediction_text}}
+
+</body>
+</html>
